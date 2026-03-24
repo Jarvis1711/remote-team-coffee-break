@@ -1,19 +1,19 @@
 GET /api/health
-{"status":"ok","app":"Remote Team "Coffee Break"","domain":"Logistics & Operations"}
+{"status":"ok"}
 
 GET /api/schema
-{"statuses":["scheduled", "active", "delayed", "completed"],"fields":[{"key":"location"},{"key":"capacity"},{"key":"execution_notes"}]}
+{"domain":"General","entity":"Domain Record","statuses":["new", "active", "done"]}
 
-POST /api/records
+POST /api/items
 {
   "id": 1,
-  "title": "Demo Record",
-  "status": "active",
+  "title": "Phase3 Demo",
+  "status": "new",
   "payload": {
-    "location": "Demo value",
-    "capacity": 12,
-    "execution_notes": "seed note"
+    "owner": "sample",
+    "impact_score": 5,
+    "notes": "notes"
   },
-  "created_at": "2026-03-24T15:52:22.317903+00:00",
-  "updated_at": "2026-03-24T15:52:22.317903+00:00"
+  "created_at": "2026-03-24T16:15:11.839306+00:00",
+  "updated_at": "2026-03-24T16:15:11.839306+00:00"
 }
